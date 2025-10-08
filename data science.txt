@@ -1,0 +1,31 @@
+Sample Starter Code
+python
+Import pandas as pd
+Isport seaborn as sns
+Isport matplotlib.pyplot as plt
+# Load dataset
+df pd.read_csv("titanic.csv")
+#FILL missing Age values with mean
+df["Age"].fillna(df["Age"].mean(), inplace True)
+Drop Irrelevant columns
+df.drop(columns["Cabin"], inplace-True)
+& Create Age Groups
+df ["AgeGroup"] = pd.cut(
+)
+df["Age"],
+bins-[0, 12, 18, 30, 50, 88),
+labels-["Child", "Teen", "Young Adult", "Adult", "Senior"]
+#Survival by Age Group
+sns.barplot(x="AgeGroup", y="Survived", data-df)
+plt.title("Survival Rate by Age Group")
+plt.show()
+& Heatmap of correlations
+sns.heatmap(df.corr(), annot=True, свар="coolware")
+plt.title("Correlation Heatmap")
+plt.show()
+#Create Family Size feature
+df["FamilySize"] = df["SibSp"] df["Parch"]
+#Survival by Family Size
+sns.barplot(x="FamilySize", y="Survived", data-df)
+plt.title("Survival Rate by Family Size")
+plt.show()

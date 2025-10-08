@@ -1,0 +1,32 @@
+python
+Import csv
+fron datetime inport datetime
+#Add expense with category
+def add_expense(desc, amount, category):
+with open("expenses.csv", "a", newlines"") as f:
+writer csv.writer(+)
+writer.writerow([desc, amount, category, datetime.now().strftime("--")]
+View all expenses
+def view expenses():
+with open("expenses.csv", "r") as f:
+for row in csv.reader(f):
+print(row)
+#Search expenses by category
+def search_category(category):
+with open("expenses.csv", "r") as f:
+for row in csv.reader(f):
+If row[2] category:
+print(row)
+Monthly total
+def monthly total(month):
+total =
+with open("expenses.csv", "r") as f:
+fur row in csv.reader(f):
+If row[3].startswith(month): e.g., "2025-09"
+total int(row[1])
+print("Monthly Total:", total)
+#Example usage
+add_expense ("Lunch", 200, "Food")
+add_expense("Bus Ticket", 50, "Travel")
+search_category("Food")
+monthly_total("2025-09")

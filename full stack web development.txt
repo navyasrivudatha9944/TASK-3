@@ -1,0 +1,37 @@
+Contact Form-contact.html
+html
+form id=contactForm
+input type=text id=name placeholder Enter Name
+input type=email id=email placeholder Enter Email
+textarea id=message placeholder=Enter Messagetextarea
+button type=submitSubmitbutton
+form
+Validation & LocalStorage - script.js
+document.getElementById(contactfors).addEventListener(submit, function(e) {
+e.preventDefault();
+let name document.getElementilyId(name).value;
+let email document.getElementById(email).value;
+let message document.getElementById(message).value;
+if (tname  temail  tmessage) (
+}
+alert(All fields are required!);
+return;
+let submissions 350N.parse(localStorage.getItem(contacts)) 
+submissions.push((name, email, message });
+localStorage.setItem(contacts, JSON.stringify(submissions));
+alert(Form submitted successfully!);
+1);
+Submissions Page - submissions.html
+html
+body
+h2A11 Submissionsh2
+ul id=listul
+script
+let submissions 350N.parse(localStorage.getItem(contacts))  [];
+let list document.getElementById(list);
+submissions.forEach(s {
+list.innerHTML += 11${s.name) 3(s.email) $(s.message)li';
+});
+script
+body
+Rana

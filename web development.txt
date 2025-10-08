@@ -1,0 +1,30 @@
+Navbar Scroll Effect (JS)
+window.addEventListener("scroll", function() {
+let navbar document.querySelector("nav");
+navbar.classList.toggle("scrolled", window.scrolly > 50);
+});
+CSS for Navbar Change
+CSS
+nav (
+}
+transition: background 0.3s;
+nav.scrolled {
+background: #222;
+color: #fff;
+}
+Form Validation (JS)
+document.getElementById("contactForm").addEventListener("submit", function(e)
+e.preventDefault();
+let email document.getElementById("email").value;
+if (temail. Includes("")){
+}
+alert("Please enter a valid email");
+returns
+alert("Form submitted successfully!");
+Dark Mode Toggle (JS)
+function togglebaritode() {
+document.body.classList.toggle("dark-mode");
+localstorage.setItem("dark", document.body.classList.contains("dark-mode"));
+window.onload(){
+if(localstorage.getItem("dark")"true") (
+document.body.classList.add("dark-mode");

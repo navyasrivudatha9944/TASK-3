@@ -1,0 +1,38 @@
+Spring Boot - Controller
+java
+@GetMapping("/contacts")
+public List<Contact> getAllContacts() {
+return repo.findAll(); // returns JSON List of contacts
+Frontend contacts.html
+html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contacts</title>
+</head>
+<body>
+<h2>All Contacts</h2>
+<table border="1">
+<thead>
+<tr><th>ID</th><th>Name</th><th>Email</th><th>Message</th></tr>
+</thead>
+<tbody id="contactTable"></tbody>
+</table>
+<script>
+fetch("http://localhost:8080/contacts")
+.then(res > res.json())
+then(data => {
+let table document.getElementById("contactTable");
+data.forEach(c => {
+let row <tr>
+<td>$(c.id)</td>
+<td>$(c.name}</td>
+<td>$(c.email]</td>
+<td>$(c.message}</td>
+</tr>';
+table.innerHTML + row;
+});
+});
+</script>
+</body>
+</html>

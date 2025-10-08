@@ -1,0 +1,19 @@
+Sample Starter Code
+sql
+Top student per course
+SELECT c.name AS course, s.name AS student, MAX(e.grade) AS top grade
+FROM enrollments e
+JOIN students s ON e.student id s.id
+JOIN courses c ON e.course_id = c.id
+GROUP BY c.name;
+Pass rate per course
+SELECT c.name,
+SUM(CASE WHEN e.grade > 40 THEN 1 ELSE B END) 188.0/COUNT(*) AS pass_rate
+FROM enrollments e
+JOIN courses c ON e.course_idc.id
+GROUP BY C.name;
+--Students in multiple courses
+SELECT student_id, COUNT (course_id) as total_courses
+FROM enrollments
+GROUP BY student_id
+HAVING COUNT (course_id) > 1;
